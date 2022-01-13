@@ -1,0 +1,3 @@
+nmap -sS --min-rate 5000 --open -p- -vvv -n -Pn -oG allPorts $1
+nmap -sCV -p$ports $1 -oN targeted
+nmap --script http-enum -p80 $1 -oN webScan
